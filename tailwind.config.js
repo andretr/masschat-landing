@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         mainGreen: '#00B435',
         lighterGreen: '#61CD66',
+        paleGreen: '#91DF99',
         brightRed: 'hsl(12, 88%, 59%)',
         brightRedLight: 'hsl(12, 88%, 69%)',
         brightRedSupLight: 'hsl(12, 88%, 95%)',
