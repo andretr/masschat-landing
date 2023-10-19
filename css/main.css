@@ -649,6 +649,14 @@ video {
   height: 4rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -803,6 +811,11 @@ video {
 .bg-lighterGreen {
   --tw-bg-opacity: 1;
   background-color: rgb(97 205 102 / var(--tw-bg-opacity));
+}
+
+.bg-lime-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 46 5 / var(--tw-bg-opacity));
 }
 
 .p-3 {
