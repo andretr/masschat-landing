@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,9 +8,10 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <title>MassChat</title>
   </head>
+
   <body>
     <!-- Navbar -->
-    <nav class="relative container mx-auto p-6">
+    <nav class="container relative mx-auto p-6">
       <!-- Flex container -->
       <div class="flex items-center justify-between">
         <!-- Logo -->
@@ -23,7 +24,9 @@
         </div>
         <!-- Menu Items -->
         <div class="hidden space-x-12 md:flex">
-          <a href="#features" class="hover:text-darkGrayishBlue">Producto PRUEBA</a>
+          <a href="#features" class="hover:text-darkGrayishBlue"
+            >Producto PRUEBA</a
+          >
           <a href="#planes" class="hover:text-darkGrayishBlue">Planes</a>
           <a href="#nosotros" class="hover:text-darkGrayishBlue">Nosotros</a>
           <a href="#faq" class="hover:text-darkGrayishBlue">FAQ</a>
@@ -31,14 +34,14 @@
         <!-- Button -->
         <a
           href="#"
-          class="hidden p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen md:block"
+          class="baseline hidden rounded-full bg-mainGreen p-3 px-6 pt-2 text-white hover:bg-lighterGreen md:block"
           >Iniciar</a
         >
 
         <!-- Hamburger Icon -->
         <button
           id="menu-btn"
-          class="block hamburger md:hidden focus:outline-none"
+          class="hamburger block focus:outline-none md:hidden"
         >
           <span class="hamburger-top"></span>
           <span class="hamburger-middle"></span>
@@ -50,7 +53,7 @@
       <div class="md:hidden">
         <div
           id="menu"
-          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+          class="absolute left-6 right-6 mt-10 hidden flex-col items-center space-y-6 self-end bg-white py-8 font-bold drop-shadow-md sm:w-auto sm:self-center"
         >
           <a href="#features">Producto</a>
           <a href="#planes">Planes</a>
@@ -64,12 +67,12 @@
     <section id="hero">
       <!-- Flex Container -->
       <div
-        class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row"
+        class="container mx-auto mt-10 flex flex-col-reverse items-center space-y-0 px-6 md:flex-row md:space-y-0"
       >
         <!-- Left item -->
-        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+        <div class="mb-32 flex flex-col space-y-12 md:w-1/2">
           <h1
-            class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
+            class="max-w-md text-center text-4xl font-bold md:text-left md:text-5xl"
           >
             Crea campañas de comunicación masiva y personalizada en WhatsApp
           </h1>
@@ -80,14 +83,123 @@
           <div class="flex justify-center md:justify-start">
             <a
               href="#"
-              class="p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen"
+              class="baseline rounded-full bg-mainGreen p-3 px-6 pt-2 text-white hover:bg-lighterGreen"
               >Iniciar</a
             >
           </div>
         </div>
         <!-- Image -->
-        <div class="md:w-1/3">
-          <img src="img/ilustration.png" alt="" />
+        <div
+          id="hero-carousel"
+          class="relative w-full"
+          data-carousel="slide"
+        >
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-800 ease-in-out" data-carousel-item>
+              <img
+                src="img/ilustration.png"
+                class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-800 ease-in-out" data-carousel-item>
+              <img
+                src="img/del_screen.png"
+                class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-800 ease-in-out" data-carousel-item>
+              <img
+                src="/img/del_illustration-intro.svg"
+                class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- Slider indicators -->
+          <div
+            class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3"
+          >
+            <button
+              type="button"
+              class="h-3 w-3 rounded-full"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              class="h-3 w-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              class="h-3 w-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+          </div>
+          <!-- Slider controls -->
+          <button
+            type="button"
+            class="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+            data-carousel-prev
+          >
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+            >
+              <svg
+                class="h-4 w-4 text-white dark:text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span class="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+            data-carousel-next
+          >
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+            >
+              <svg
+                class="h-4 w-4 text-white dark:text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span class="sr-only">Next</span>
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -96,11 +208,11 @@
     <section id="features">
       <!-- Flex container -->
       <div
-        class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row"
+        class="container mx-auto mt-10 flex flex-col space-y-12 px-4 md:flex-row md:space-y-0"
       >
         <!-- Left item -->
         <div class="flex flex-col space-y-12 md:w-1/2">
-          <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
+          <h2 class="max-w-md text-center text-4xl font-bold md:text-left">
             Una solución diferente
           </h2>
           <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
@@ -115,13 +227,13 @@
         <div class="flex flex-col space-y-8 md:w-1/2">
           <!-- List Item 1 -->
           <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+            class="flex flex-col space-y-3 md:flex-row md:space-x-6 md:space-y-0"
           >
             <!-- Heading -->
             <div class="rounded-l-full bg-paleGreen md:bg-transparent">
               <div class="flex items-center space-x-2">
                 <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-mainGreen"
+                  class="rounded-full bg-mainGreen px-4 py-2 text-white md:py-1"
                 >
                   01
                 </div>
@@ -132,7 +244,7 @@
             </div>
 
             <div>
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
+              <h3 class="mb-4 hidden text-lg font-bold md:block">
                 Creación y seguimiento de campañas publicitarias por Whatsapp
               </h3>
               <p class="text-darkGrayishBlue">
@@ -148,13 +260,13 @@
 
           <!-- List Item 2 -->
           <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+            class="flex flex-col space-y-3 md:flex-row md:space-x-6 md:space-y-0"
           >
             <!-- Heading -->
             <div class="rounded-l-full bg-paleGreen md:bg-transparent">
               <div class="flex items-center space-x-2">
                 <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-mainGreen"
+                  class="rounded-full bg-mainGreen px-4 py-2 text-white md:py-1"
                 >
                   02
                 </div>
@@ -165,7 +277,7 @@
             </div>
 
             <div>
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
+              <h3 class="mb-4 hidden text-lg font-bold md:block">
                 Chat de atención al cliente multi-agente
               </h3>
               <p class="text-darkGrayishBlue">
@@ -180,13 +292,13 @@
 
           <!-- List Item 3 -->
           <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+            class="flex flex-col space-y-3 md:flex-row md:space-x-6 md:space-y-0"
           >
             <!-- Heading -->
             <div class="rounded-l-full bg-paleGreen md:bg-transparent">
               <div class="flex items-center space-x-2">
                 <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-mainGreen"
+                  class="rounded-full bg-mainGreen px-4 py-2 text-white md:py-1"
                 >
                   03
                 </div>
@@ -197,7 +309,7 @@
             </div>
 
             <div>
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
+              <h3 class="mb-4 hidden text-lg font-bold md:block">
                 Integración con lista de contactos
               </h3>
               <p class="text-darkGrayishBlue">
@@ -215,28 +327,26 @@
     <!-- Planes -->
     <section id="planes">
       <!-- Container to heading and testm blocks -->
-      <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+      <div class="mx-auto mt-32 max-w-6xl px-5 text-center">
         <!-- Heading -->
-        <h2 class="text-4xl font-bold text-center">Planes</h2>
+        <h2 class="text-center text-4xl font-bold">Planes</h2>
         <!-- Plan Container -->
-        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+        <div class="mt-24 flex flex-col md:flex-row md:space-x-6">
           <!-- Plan 1 -->
           <div
-            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-200 md:w-1/3"
+            class="flex flex-col items-center space-y-6 rounded-lg bg-gray-200 p-6 md:w-1/3"
           >
             <h5 class="text-lg font-bold">Básico</h5>
             <p class="text-5xl font-bold">USD $35</p>
             <p class="text-base text-gray-500">POR MES</p>
-            <div class="text-left space-y-4 rounded-lg">
+            <div class="space-y-4 rounded-lg text-left">
               <div class="flex">
                 <img
                   src="https://uploads-ssl.webflow.com/6435a09bcda5647efc80f618/6435a09ccda5645d9480f7de_Green_Check.svg"
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Envío de 1,000 mensajes gratis por mes
-                </p>
+                <p class="">Envío de 1,000 mensajes gratis por mes</p>
               </div>
               <div class="flex">
                 <img
@@ -244,9 +354,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Hasta 3 Agentes
-                </p>
+                <p class="">Hasta 3 Agentes</p>
               </div>
               <div class="flex">
                 <img
@@ -254,9 +362,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Registro y segmentación hasta 1,000 Contactos
-                </p>
+                <p class="">Registro y segmentación hasta 1,000 Contactos</p>
               </div>
               <div class="flex">
                 <img
@@ -264,9 +370,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Creación de campañas
-                </p>
+                <p class="">Creación de campañas</p>
               </div>
               <div class="flex">
                 <img
@@ -274,9 +378,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Reportes de mensajería enviada
-                </p>
+                <p class="">Reportes de mensajería enviada</p>
               </div>
               <div class="flex">
                 <img
@@ -284,15 +386,13 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Integración mediante Excel
-                </p>
+                <p class="">Integración mediante Excel</p>
               </div>
             </div>
             <div class="my-16">
               <a
                 href="#"
-                class="p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen"
+                class="baseline rounded-full bg-mainGreen p-3 px-6 pt-2 text-white hover:bg-lighterGreen"
                 >Iniciar</a
               >
             </div>
@@ -300,21 +400,19 @@
 
           <!-- Plan 2 -->
           <div
-            class="flex-col items-center p-6 space-y-6 rounded-lg bg-paleGreen/70 md:flex md:w-1/3"
+            class="flex-col items-center space-y-6 rounded-lg bg-paleGreen/70 p-6 md:flex md:w-1/3"
           >
             <h5 class="text-lg font-bold">Avanzado</h5>
             <p class="text-5xl font-bold">USD $70</p>
             <p class="text-base text-gray-500">POR MES</p>
-            <div class="text-left space-y-4 rounded-lg">
+            <div class="space-y-4 rounded-lg text-left">
               <div class="flex">
                 <img
                   src="https://uploads-ssl.webflow.com/6435a09bcda5647efc80f618/6435a09ccda5645d9480f7de_Green_Check.svg"
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Envío de 1,000 mensajes gratis por mes
-                </p>
+                <p class="">Envío de 1,000 mensajes gratis por mes</p>
               </div>
               <div class="flex">
                 <img
@@ -322,9 +420,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Hasta 5 Agentes
-                </p>
+                <p class="">Hasta 5 Agentes</p>
               </div>
               <div class="flex">
                 <img
@@ -332,9 +428,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Registro y segmentación hasta 5,000 Contactos
-                </p>
+                <p class="">Registro y segmentación hasta 5,000 Contactos</p>
               </div>
               <div class="flex">
                 <img
@@ -342,9 +436,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Creación de campañas
-                </p>
+                <p class="">Creación de campañas</p>
               </div>
               <div class="flex">
                 <img
@@ -352,9 +444,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Reportes de mensajería enviada
-                </p>
+                <p class="">Reportes de mensajería enviada</p>
               </div>
               <div class="flex">
                 <img
@@ -362,9 +452,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Integración mediante Excel y APIs
-                </p>
+                <p class="">Integración mediante Excel y APIs</p>
               </div>
               <div class="flex">
                 <img
@@ -372,9 +460,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Chatbot para respuestas automatizadas 
-                </p>
+                <p class="">Chatbot para respuestas automatizadas</p>
               </div>
               <div class="flex">
                 <img
@@ -382,9 +468,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Gestión de métricas y definición de KPIs
-                </p>
+                <p class="">Gestión de métricas y definición de KPIs</p>
               </div>
               <div class="flex">
                 <img
@@ -392,15 +476,13 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Soporte helpdesk (5x8)
-                </p>
+                <p class="">Soporte helpdesk (5x8)</p>
               </div>
             </div>
             <div class="my-16">
               <a
                 href="#"
-                class="p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen"
+                class="baseline rounded-full bg-mainGreen p-3 px-6 pt-2 text-white hover:bg-lighterGreen"
                 >Iniciar</a
               >
             </div>
@@ -408,21 +490,19 @@
 
           <!-- Plan 3 -->
           <div
-            class="flex-col items-center p-6 space-y-6 rounded-lg bg-gray-200 md:flex md:w-1/3"
+            class="flex-col items-center space-y-6 rounded-lg bg-gray-200 p-6 md:flex md:w-1/3"
           >
             <h5 class="text-lg font-bold">Empresarial</h5>
             <p class="text-5xl font-bold">USD $200</p>
             <p class="text-base text-gray-500">POR MES</p>
-            <div class="text-left space-y-4 rounded-lg">
+            <div class="space-y-4 rounded-lg text-left">
               <div class="flex">
                 <img
                   src="https://uploads-ssl.webflow.com/6435a09bcda5647efc80f618/6435a09ccda5645d9480f7de_Green_Check.svg"
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Envío de 1,000 mensajes gratis por mes
-                </p>
+                <p class="">Envío de 1,000 mensajes gratis por mes</p>
               </div>
               <div class="flex">
                 <img
@@ -430,9 +510,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Hasta 10 Agentes
-                </p>
+                <p class="">Hasta 10 Agentes</p>
               </div>
               <div class="flex">
                 <img
@@ -440,9 +518,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Registro y segmentación hasta 10,000 Contactos
-                </p>
+                <p class="">Registro y segmentación hasta 10,000 Contactos</p>
               </div>
               <div class="flex">
                 <img
@@ -450,9 +526,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Creación de campañas
-                </p>
+                <p class="">Creación de campañas</p>
               </div>
               <div class="flex">
                 <img
@@ -460,9 +534,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Reportes de mensajería enviada
-                </p>
+                <p class="">Reportes de mensajería enviada</p>
               </div>
               <div class="flex">
                 <img
@@ -470,9 +542,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Integración mediante Excel y APIs
-                </p>
+                <p class="">Integración mediante Excel y APIs</p>
               </div>
               <div class="flex">
                 <img
@@ -480,9 +550,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Chatbot para respuestas automatizadas 
-                </p>
+                <p class="">Chatbot para respuestas automatizadas</p>
               </div>
               <div class="flex">
                 <img
@@ -490,9 +558,7 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Gestión de métricas y definición de KPIs
-                </p>
+                <p class="">Gestión de métricas y definición de KPIs</p>
               </div>
               <div class="flex">
                 <img
@@ -500,17 +566,13 @@
                   alt=""
                   class="px-2"
                 />
-                <p class="">
-                  Soporte helpdesk (24x7)
-                </p>
+                <p class="">Soporte helpdesk (24x7)</p>
               </div>
-              
-              
             </div>
             <div class="my-16">
               <a
                 href="#"
-                class="p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen"
+                class="baseline rounded-full bg-mainGreen p-3 px-6 pt-2 text-white hover:bg-lighterGreen"
                 >Iniciar</a
               >
             </div>
@@ -524,16 +586,16 @@
     <!-- Nosotros -->
     <section id="nosotros">
       <!-- Container to heading and testm blocks -->
-      <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+      <div class="mx-auto mt-32 max-w-6xl px-5 text-center">
         <!-- Heading -->
-        <h2 class="text-4xl font-bold text-center">Nosotros</h2>
+        <h2 class="text-center text-4xl font-bold">Nosotros</h2>
         <!-- Testimonials Container -->
-        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+        <div class="mt-24 flex flex-col md:flex-row md:space-x-6">
           <!-- Testimonial 1 -->
           <div
-            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-200 md:w-1/4"
+            class="flex flex-col items-center space-y-6 rounded-lg bg-gray-200 p-6 md:w-1/4"
           >
-            <img src="img/avatar-richard.png" class="w-16 -mt-14" alt="" />
+            <img src="img/avatar-richard.png" class="-mt-14 w-16" alt="" />
             <h5 class="text-lg font-bold">Andre</h5>
             <p class="text-sm text-darkGrayishBlue">
               “Manage has supercharged our team’s workflow. The ability to
@@ -544,9 +606,9 @@
 
           <!-- Testimonial 2 -->
           <div
-            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-gray-200 md:flex md:w-1/4"
+            class="hidden flex-col items-center space-y-6 rounded-lg bg-gray-200 p-6 md:flex md:w-1/4"
           >
-            <img src="img/avatar-ali.png" class="w-16 -mt-14" alt="" />
+            <img src="img/avatar-ali.png" class="-mt-14 w-16" alt="" />
             <h5 class="text-lg font-bold">Denisse</h5>
             <p class="text-sm text-darkGrayishBlue">
               “We have been able to cancel so many other subscriptions since
@@ -557,9 +619,9 @@
 
           <!-- Testimonial 3 -->
           <div
-            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-gray-200 md:flex md:w-1/4"
+            class="hidden flex-col items-center space-y-6 rounded-lg bg-gray-200 p-6 md:flex md:w-1/4"
           >
-            <img src="img/avatar-richard.png" class="w-16 -mt-14" alt="" />
+            <img src="img/avatar-richard.png" class="-mt-14 w-16" alt="" />
             <h5 class="text-lg font-bold">Jona</h5>
             <p class="text-sm text-darkGrayishBlue">
               “Manage has supercharged our team’s workflow. The ability to
@@ -570,9 +632,9 @@
 
           <!-- Testimonial 4 -->
           <div
-            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-gray-200 md:flex md:w-1/4"
+            class="hidden flex-col items-center space-y-6 rounded-lg bg-gray-200 p-6 md:flex md:w-1/4"
           >
-            <img src="img/avatar-anisha.png" class="w-16 -mt-14" alt="" />
+            <img src="img/avatar-anisha.png" class="-mt-14 w-16" alt="" />
             <h5 class="text-lg font-bold">Silvia</h5>
             <p class="text-sm text-darkGrayishBlue">
               “Manage has supercharged our team’s workflow. The ability to
@@ -585,7 +647,7 @@
         <div class="my-16">
           <a
             href="#"
-            class="p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen"
+            class="baseline rounded-full bg-mainGreen p-3 px-6 pt-2 text-white hover:bg-lighterGreen"
             >Iniciar</a
           >
         </div>
@@ -596,11 +658,11 @@
     <section id="cta" class="bg-lighterGreen">
       <!-- Flex Container -->
       <div
-        class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
+        class="container mx-auto flex flex-col items-center justify-between space-y-12 px-6 py-24 md:flex-row md:space-y-0 md:py-12"
       >
         <!-- Heading -->
         <h2
-          class="text-5xl font-bold text-center text-white md:text-4xl md:max-w-xl md:text-left"
+          class="text-center text-5xl font-bold text-white md:max-w-xl md:text-left md:text-4xl"
         >
           Decubre una nueva forma de marketing digital en WhatsApp
         </h2>
@@ -608,7 +670,7 @@
         <div>
           <a
             href="#"
-            class="p-3 px-6 pt-2 text-mainGreen bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
+            class="baseline rounded-full bg-white p-3 px-6 pt-2 text-mainGreen shadow-2xl hover:bg-gray-900"
             >Iniciar</a
           >
         </div>
@@ -619,11 +681,11 @@
     <footer class="bg-veryDarkBlue">
       <!-- Flex Container -->
       <div
-        class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+        class="container mx-auto flex flex-col-reverse justify-between space-y-8 px-6 py-10 md:flex-row md:space-y-0"
       >
         <!-- Logo and social links container -->
         <div
-          class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+          class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:items-start md:space-y-0"
         >
           <div class="mx-auto my-6 text-center text-white md:hidden">
             Copyright &copy; 2022, All Rights Reserved
@@ -661,13 +723,13 @@
         <div class="flex justify-around space-x-32">
           <div class="flex flex-col space-y-3 text-white">
             <div class="hidden text-white md:block">
-              <p class="font-bold">CONTACTANOS</p> 
+              <p class="font-bold">CONTACTANOS</p>
             </div>
             <div class="hidden text-white md:block">
-              DIRECCION: La Paz, Calle 29 Nro. 22 Zona Cota Cota.              
+              DIRECCION: La Paz, Calle 29 Nro. 22 Zona Cota Cota.
             </div>
             <div class="hidden text-white md:block">
-              TELEFONO: (591) 72573141              
+              TELEFONO: (591) 72573141
             </div>
           </div>
         </div>
@@ -680,6 +742,7 @@
       </div>
     </footer>
 
+    <script src="js/flowbite.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

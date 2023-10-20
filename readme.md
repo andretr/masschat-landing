@@ -1,27 +1,35 @@
-# Tailwind Manage Landing Page
+# MassChat Landing Page
 
-This is the project from my 2022 Tailwind Crash Course on YouTube.
-
-![Alt text](/img/screen.png?raw=true)
+This is the landing page for MassChat 
 
 # Usage
 
 Install dependencies (Tailwind)
 
 ```
-npm install
+yarn install
 ```
 
 Run the Tailwind CLI to compile the **input.css** during development. The output file is **css/main.css**
 
 ```
-npm run watch
+yarn watch
 ```
 
 To build once run...
 
 ```
-npm run build
+yarn build
 ```
 
 You can edit the scripts in package.json and the tailwind.config.js file to change input/output locations
+
+
+# Documentation
+
+Tailwind:
+https://tailwindcss.com/docs/
+https://tailwindcomponents.com/cheatsheet/
+
+Flowbite: 
+https://flowbite.com/docs/getting-started/introduction/
