@@ -30,6 +30,7 @@ You can edit the scripts in package.json and the tailwind.config.js file to chan
 Tailwind:
 https://tailwindcss.com/docs/
 https://tailwindcomponents.com/cheatsheet/
+https://youtu.be/dFgzHOX84xQ?si=HuS0VC3xBj06Na7T
 
 Flowbite: 
 https://flowbite.com/docs/getting-started/introduction/
